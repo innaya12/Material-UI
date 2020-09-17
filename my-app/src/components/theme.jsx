@@ -1,16 +1,27 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
-import green from '@material-ui/core/colors/green';
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: red[500],
-    },
-    secondary: {
-      main: green[500],
-    },
+    type: "dark"
   },
+  typography: {
+    useNextVariants: true,
+    fontSize: "8"
+  },
+  grid :{
+    alignContent: 'space-between'
+  }, 
+  overrides: {
+    MuiTableCell: {
+      root: {
+        paddingTop: 10,
+        paddingBottom: 1,
+        "&:last-child": {
+          paddingRight: 2
+        }
+      }
+    }
+  }
 });
 
 export default theme;
